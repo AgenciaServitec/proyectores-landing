@@ -1,16 +1,23 @@
 ---
----
-<main>
-    <h3> Reparacion y venta de proyectores</h3>
 
-    <section class="seosection">
-        <div class="seosection-img">
-            <img src="../../../public/images/seosection.webp" alt="" />
-        </div>
-        <div class="seosection-text">
-            <p> ¿Necesitas reparar o comprar un proyector?. Ofrecemos una amplia gama de proyectores nuevos y reacondicionados, así como repuestos de alta calidad. Nuestro equipo de expertos está listo para ayudarte a encontrar la solución perfecta para tus necesidades de proyección. ¡Haz que tus presentaciones y eventos brillen como nunca!</p>
-        </div>
-    </section>
+---
+
+<main>
+  <h1>Reparacion y venta de proyectores</h1>
+  <section class="seo-section">
+    <div class="seo-section-img">
+      <img src="./images/seo-section.webp" alt="" />
+    </div>
+    <div class="seo-section-text">
+      <p>
+        ¿Necesitas reparar o comprar un proyector?. Ofrecemos una amplia gama de
+        proyectores nuevos y reacondicionados, así como repuestos de alta
+        calidad. Nuestro equipo de expertos está listo para ayudarte a encontrar
+        la solución perfecta para tus necesidades de proyección. ¡Haz que tus
+        presentaciones y eventos brillen como nunca!
+      </p>
+    </div>
+  </section>
 </main>
 
 <style lang="scss">
@@ -21,31 +28,31 @@
     @media (max-width: 576px) {
       padding: 0;
     }
-    h3 {
+
+    h1 {
       text-align: center;
       font-size: 3.5rem;
-      color: #fff000;
-      line-height: 1;
       text-transform: uppercase;
       font-style: italic;
-      margin-bottom: 1em;
-
+      color: #fff000;
+      margin-bottom: 1rem;
       @media (max-width: 576px) {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+      }
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+        text-align: center;
       }
     }
 
-    section {
+    .seo-section {
       width: 100%;
       padding: 0 10rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1em;
 
-
-
-      .seosection-img {
-
+      .seo-section-img {
         img {
           width: 100%;
           height: auto;
@@ -54,7 +61,7 @@
         }
       }
 
-      .seosection-text {
+      .seo-section-text {
         text-align: left;
         font-size: 1.2rem;
       }
@@ -65,8 +72,7 @@
         padding: 0 1rem;
         grid-template-columns: 1fr;
 
-
-        .seosection-text {
+        .seo-section-text {
           text-align: center;
           font-size: 1.2rem;
         }
