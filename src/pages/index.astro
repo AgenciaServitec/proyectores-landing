@@ -3,9 +3,10 @@ import { BaseLayout } from "../layouts";
 import {
   CarouselProducts,
   SectionWrapper,
-  AboutUsComponent,
+  SeoSection,
 } from "../components";
 import BrandsSection from "../components/home/BrandsSection.astro";
+import ContactFormComponent from "../components/contact/ContactFormComponent";
 ---
 
 <BaseLayout>
@@ -18,8 +19,14 @@ import BrandsSection from "../components/home/BrandsSection.astro";
     </div>
 
     <SectionWrapper>
-      <AboutUsComponent />
+      <SeoSection />
     </SectionWrapper>
+
+
+      <SectionWrapper>
+        <ContactFormComponent client:load />
+      </SectionWrapper>
+
 
     <SectionWrapper>
       <CarouselProducts />

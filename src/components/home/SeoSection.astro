@@ -1,0 +1,76 @@
+---
+---
+<main>
+    <h3> Reparacion y venta de proyectores</h3>
+
+    <section class="seosection">
+        <div class="seosection-img">
+            <img src="../../../public/images/seosection.webp" alt="" />
+        </div>
+        <div class="seosection-text">
+            <p> ¿Necesitas reparar o comprar un proyector?. Ofrecemos una amplia gama de proyectores nuevos y reacondicionados, así como repuestos de alta calidad. Nuestro equipo de expertos está listo para ayudarte a encontrar la solución perfecta para tus necesidades de proyección. ¡Haz que tus presentaciones y eventos brillen como nunca!</p>
+        </div>
+    </section>
+</main>
+
+<style lang="scss">
+  main {
+    width: 100%;
+    padding: 2em 5em;
+
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+    h3 {
+      text-align: center;
+      font-size: 3.5rem;
+      color: #fff000;
+      line-height: 1;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 1em;
+
+      @media (max-width: 576px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    section {
+      width: 100%;
+      padding: 0 10rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+
+
+
+      .seosection-img {
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1em;
+          object-fit: cover;
+        }
+      }
+
+      .seosection-text {
+        text-align: left;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      section {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+
+
+        .seosection-text {
+          text-align: center;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+</style>
