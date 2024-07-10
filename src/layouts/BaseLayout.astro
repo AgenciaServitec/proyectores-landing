@@ -5,9 +5,10 @@ import { ButtonFloating } from "../components";
 
 interface Props {
   title?: string;
+  googleTags?: boolean;
 }
 
-const { title = "Proyectores Servitec" } = Astro.props;
+const { title = "Proyectores Servitec", googleTags } = Astro.props;
 ---
 
 <!doctype html>
@@ -57,6 +58,15 @@ const { title = "Proyectores Servitec" } = Astro.props;
         return false;
       }
     </script>
+
+    {googleTags && (
+      // Event snippet for Enviar formulario de clientes potenciales conversion page
+      <script>
+        gtag("event", "conversion", {
+        send_to: "AW-465592700/63EECKX0mfcBEPzCgd4B",
+        });
+      </script>
+    )}
   </head>
   <body>
     <div class="general-wrapper">
