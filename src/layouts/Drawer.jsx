@@ -37,8 +37,8 @@ const Drawer = ({ children }) => {
               onHiddenDrawer={hiddenDrawer}
             />
             <ItemLi
-              text="Productos"
-              path="/products"
+              text="Servicios"
+              path="/services"
               onHiddenDrawer={hiddenDrawer}
             />
             <ItemLi
