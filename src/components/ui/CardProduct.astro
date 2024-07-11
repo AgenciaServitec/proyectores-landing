@@ -3,11 +3,9 @@ const { name, imagePath } = Astro.props;
 ---
 
 <article class="product">
-  <a href="/contact">
-    <div class="product__img">
-      <img src={imagePath} alt={name} />
-    </div>
-  </a>
+  <div class="product__img">
+    <img src={imagePath} alt={name} />
+  </div>
 </article>
 
 <style lang="scss">
