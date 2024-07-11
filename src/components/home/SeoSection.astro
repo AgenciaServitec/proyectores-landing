@@ -2,9 +2,9 @@
 
 ---
 
-<main>
+<section>
   <h1>Reparacion y venta de proyectores</h1>
-  <section class="seo-section">
+  <div class="seo-section">
     <div class="seo-section-img">
       <img src="./images/about-us-banner.webp" alt="sobre nosotros" />
     </div>
@@ -17,40 +17,37 @@
         presentaciones y eventos brillen como nunca!
       </p>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <style lang="scss">
-  main {
+  section {
     width: 100%;
-    padding: 2em 5em;
 
-    @media (max-width: 576px) {
-      padding: 0;
+    @media (min-width: 1024px) {
+      padding: 0 5em;
     }
 
     h1 {
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 2em;
       text-transform: uppercase;
       font-style: italic;
       color: #fff000;
       margin-bottom: 1rem;
-      @media (max-width: 576px) {
-        font-size: 1.5rem;
-      }
-      @media (max-width: 1024px) {
-        font-size: 3rem;
-        text-align: center;
+      @media (min-width: 920px) {
+        font-size: 3.5em;
       }
     }
 
     .seo-section {
       width: 100%;
-      padding: 0 10rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
+      grid-template-columns: 1fr;
+      gap: 2em;
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       .seo-section-img {
         img {
@@ -62,19 +59,11 @@
       }
 
       .seo-section-text {
-        text-align: left;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 720px) {
-      section {
-        padding: 0 1rem;
-        grid-template-columns: 1fr;
-
-        .seo-section-text {
-          text-align: center;
-          font-size: 1.2rem;
+        text-align: center;
+        font-size: 1em;
+        @media (min-width: 920px) {
+          text-align: left;
+          font-size: 1.2em;
         }
       }
     }

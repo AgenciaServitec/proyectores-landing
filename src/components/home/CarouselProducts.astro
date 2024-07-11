@@ -18,8 +18,6 @@ import { services } from "../../data-list";
 
 <style lang="scss">
   section {
-    padding: 2em 1em;
-
     .wrapper-title {
       width: 70%;
       margin: auto;
@@ -29,13 +27,13 @@ import { services } from "../../data-list";
 
       h2 {
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 2em;
         line-height: 1;
         text-transform: uppercase;
         font-style: italic;
         margin-bottom: 1em;
-        @media (max-width: 576px) {
-          font-size: 2.5rem;
+        @media (min-width: 920px) {
+          font-size: 3.5em;
         }
       }
     }
@@ -45,7 +43,7 @@ import { services } from "../../data-list";
       width: 100%;
       max-width: 1280px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1em;
       justify-content: center;
       padding: 1em;
