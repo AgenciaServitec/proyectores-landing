@@ -1,10 +1,10 @@
 ---
-const { name, imagePath } = Astro.props;
+const { imageAlt, imagePath } = Astro.props;
 ---
 
 <article class="product">
   <div class="product__img">
-    <img src={imagePath} alt={name} />
+    <img src={imagePath} alt={imageAlt} />
   </div>
 </article>
 

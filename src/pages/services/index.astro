@@ -10,7 +10,7 @@ import { services } from "../../data-list";
     <section class="card-list">
       {
         services.map((product, index) => (
-          <CardProduct key={index} imagePath={product?.imagePath} />
+          <CardProduct key={index} imagePath={product?.imagePath} imageAlt={product.imageAlt} />
         ))
       }
     </section>
