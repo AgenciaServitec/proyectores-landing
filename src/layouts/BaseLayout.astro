@@ -1,7 +1,8 @@
 ---
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
-import { ButtonFloating } from "../components";
+
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -25,96 +26,34 @@ const { title = "Proyectores Servitec" } = Astro.props;
     />
 
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
     <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;
-        j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TXVJVHBX');
-  </script>
+  <!--  <script is:inline>-->
+  <!--    (function(w,d,s,l,i){-->
+  <!--      w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});-->
+  <!--      var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';-->
+  <!--      j.async=true;-->
+  <!--      j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;-->
+  <!--      f.parentNode.insertBefore(j,f);-->
+  <!--    })(window,document,'script','dataLayer','GTM-TXVJVHBX');-->
+  <!--</script>-->
     <!-- End Google Tag Manager -->
-
-    <!-- Smartsupp Live Chat script -->
-    <script type="text/javascript">
-      var _smartsupp = _smartsupp || {};
-      _smartsupp.key = 'e5e700bbd8b99477964b68df83f37a276c01149b';
-      window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-      })(document);
-    </script>
   </head>
   <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXVJVHBX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  <!--<noscript>-->
+  <!--  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXVJVHBX" height="0" width="0" style="display:none;visibility:hidden"></iframe>-->
+  <!--</noscript>-->
   <!-- End Google Tag Manager (noscript) -->
-    <div class="general-wrapper">
+    <div>
       <Header />
       <div class="main">
         <slot />
       </div>
-      <ButtonFloating />
       <Footer />
     </div>
-    <style is:global lang="scss">
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        font-family: system-ui, sans-serif;
-        background: rgb(5, 5, 5);
-        color: #fff;
-      }
-
-      body {
-        margin: 0;
-        font-size: 16px;
-        overflow-x: hidden;
-      }
-
-      .general-wrapper {
-        max-width: 1530px;
-        margin: auto;
-        position: relative;
-        background: #13151a;
-      }
-
-      .main {
-        width: 100%;
-        height: auto;
-      }
-
-      .color {
-        &__primary {
-          color: #fff000;
-        }
-
-        &__secondary {
-          color: #0c0c0ccc;
-        }
-
-        &__white {
-          color: #fff;
-        }
-
-        &__black {
-          color: #000;
-        }
-      }
-    </style>
   </body>
 </html>

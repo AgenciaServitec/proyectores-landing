@@ -1,0 +1,120 @@
+---
+import ContentWidth from "../components/ui/ContentWidth.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  whatsappLink?: string;
+  address?: string;
+  schedule?: string;
+}
+
+const {
+  title = "Formas de atención",
+  description = "Elige la opción más cómoda. Te atendemos por WhatsApp, en taller o coordinamos recojo/entrega.",
+  whatsappLink = "https://wa.me/51941801827?text=Hola%20Servitec,%20necesito%20ayuda%20con%20mi%20proyector.",
+  address = "Chorrillos, Lima (referencia: Av. Fernando Terán)",
+  schedule = "Lun–Vie 09:00 – 18:00",
+} = Astro.props;
+---
+
+<section class="mb-20">
+  <ContentWidth>
+    <header class="max-w-2xl">
+      <h2 class="text-2xl font-semibold md:text-3xl">{title}</h2>
+      <p class="mt-3 text-[color:var(--color-muted)]">{description}</p>
+    </header>
+
+    <div class="mt-10 grid gap-4 lg:grid-cols-3">
+      <!-- WhatsApp -->
+      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
+        <div class="flex items-center justify-between gap-4">
+          <h3 class="text-lg font-semibold">WhatsApp</h3>
+          <span class="rounded-full bg-[color:var(--color-surface)] px-2.5 py-1 text-xs text-[color:var(--color-muted-2)]">
+            Recomendado
+          </span>
+        </div>
+        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
+          Envíanos la falla y el modelo. Te respondemos con opciones y pasos a seguir.
+        </p>
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            mt-5 inline-flex w-full items-center justify-center
+            rounded-[var(--radius-md)]
+            bg-[color:var(--color-primary)]
+            px-5 py-3 font-medium text-black
+            transition hover:bg-[color:var(--color-primary-hover)]
+            focus:outline-none focus:ring-2 focus:ring-[color:var(--color-ring)]
+          "
+        >
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <!-- Taller -->
+      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
+        <h3 class="text-lg font-semibold">Atención en taller</h3>
+        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
+          Puedes acercarte con tu equipo para evaluación. Coordinamos la recepción y tiempos.
+        </p>
+        <div class="mt-5 space-y-2 text-sm text-[color:var(--color-muted-2)]">
+          <p><span class="text-[color:var(--color-foreground)] font-medium">Ubicación:</span> {address}</p>
+          <p><span class="text-[color:var(--color-foreground)] font-medium">Horario:</span> {schedule}</p>
+        </div>
+        <a
+          href="/contacto"
+          class="
+            mt-5 inline-flex w-full items-center justify-center
+            rounded-[var(--radius-md)]
+            border border-[color:var(--color-border)]
+            px-5 py-3 font-medium
+            transition hover:border-[color:var(--color-accent)]
+            hover:text-[color:var(--color-accent)]
+          "
+        >
+          Ver contacto
+        </a>
+      </div>
+
+      <!-- Recojo -->
+      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
+        <h3 class="text-lg font-semibold">Recojo y entrega</h3>
+        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
+          Si estás en Lima, coordinamos recojo/entrega (según zona). Ideal para colegios y empresas.
+        </p>
+
+        <ul class="mt-5 space-y-2 text-sm text-[color:var(--color-muted-2)]">
+          <li class="flex gap-2">
+            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
+            Coordinación por WhatsApp
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
+            Para equipos grandes / salas
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
+            Atención a empresas y colegios
+          </li>
+        </ul>
+
+        <a
+          href="/cotizar"
+          class="
+            mt-5 inline-flex w-full items-center justify-center
+            rounded-[var(--radius-md)]
+            border border-[color:var(--color-border)]
+            px-5 py-3 font-medium
+            transition hover:border-[color:var(--color-accent)]
+            hover:text-[color:var(--color-accent)]
+          "
+        >
+          Cotizar recojo
+        </a>
+      </div>
+    </div>
+  </ContentWidth>
+</section>

@@ -1,0 +1,88 @@
+---
+import ContentWidth from "../components/ui/ContentWidth.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  whatsappLink?: string;
+  quoteLink?: string;
+}
+
+const {
+  title = "¿Necesitas reparar o cotizar un proyector?",
+  description = "Envíanos el modelo y la falla. Te asesoramos rápido y sin compromiso.",
+  whatsappLink = "https://wa.me/51941801827?text=Hola%20Servitec,%20quiero%20cotizar%20un%20servicio%20para%20mi%20proyector.",
+  quoteLink = "/cotizar",
+} = Astro.props;
+---
+
+<section class="mb-20">
+  <ContentWidth>
+    <div
+      class="
+        rounded-[var(--radius-lg)]
+        border border-[color:var(--color-border)]
+        bg-[color:var(--color-card)]
+        shadow-[var(--shadow-card)]
+        transition
+        hover:ring-2 hover:ring-[color:var(--color-ring)]
+      "
+    >
+      <div class="flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-10">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] px-3 py-1 text-xs text-[color:var(--color-muted-2)]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
+            Cotización rápida
+          </div>
+
+          <h2 class="mt-4 text-2xl font-semibold md:text-3xl">
+            {title}
+          </h2>
+
+          <p class="mt-3 text-[color:var(--color-muted)]">
+            {description}
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-4 text-sm text-[color:var(--color-muted-2)]">
+            <span>✔ Diagnóstico técnico</span>
+            <span>✔ Repuestos de calidad</span>
+            <span>✔ Garantía</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              inline-flex items-center justify-center
+              rounded-[var(--radius-md)]
+              bg-[color:var(--color-primary)]
+              px-6 py-3 font-medium text-black
+              transition hover:bg-[color:var(--color-primary-hover)]
+              focus:outline-none focus:ring-2 focus:ring-[color:var(--color-ring)]
+            "
+          >
+            Hablar por WhatsApp
+          </a>
+
+          <a
+            href={quoteLink}
+            class="
+              inline-flex items-center justify-center
+              rounded-[var(--radius-md)]
+              border border-[color:var(--color-border)]
+              bg-transparent px-6 py-3 font-medium
+              text-[color:var(--color-foreground)]
+              transition hover:border-[color:var(--color-accent)]
+              hover:text-[color:var(--color-accent)]
+            "
+          >
+            Ir al formulario
+          </a>
+        </div>
+      </div>
+    </div>
+  </ContentWidth>
+</section>
