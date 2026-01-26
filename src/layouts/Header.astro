@@ -1,24 +1,93 @@
 ---
-import Icon from "astro-icon";
+import ContentWidth from "../components/ui/ContentWidth.astro";
 ---
 
-<header id="header-item" class="header-relative">
-  <div class="img-logo">
-    <a href="/" rel="noreferrer"
-      ><img src="/images/logo.webp" alt="Logo proyectores Servitec" /></a
-    >
-  </div>
-  <div class="item-menu">
-    <ul>
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/src/pages/about">Nosotros</a></li>
-      <li><a href="/services">Services</a></li>
-      <li>
-        <a href="/contact" class="anchor-icon">
-          <Icon pack="mdi" name="phone" size={19} />
-          <span>Contacto</span>
+<header class="w-full bg-[#050505] border-b border-white/5 relative">
+  <ContentWidth>
+    <div class="flex items-center justify-between h-20 md:h-28">
+
+      <div class="flex-shrink-0 z-50">
+        <a href="/" class="block transition-transform hover:scale-105">
+          <img
+            src="/images/logo.webp"
+            alt="Logo Proyectores Servitec"
+            class="h-9 md:h-11 w-auto"
+          />
         </a>
-      </li>
-    </ul>
+      </div>
+
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-10">
+          <li><a href="/" class="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Inicio</a></li>
+          <li><a href="#nosotros" class="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Nosotros</a></li>
+          <li><a href="#servicios" class="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Servicios</a></li>
+          <li><a href="#productos" class="text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Equipos</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-4 z-50">
+        <a
+          href="/contacto"
+          class="hidden sm:inline-flex items-center gap-3 rounded-xl bg-yellow-400 px-6 py-3 text-[11px] font-black uppercase tracking-[0.15em] text-black hover:bg-yellow-300 transition-all shadow-lg shadow-yellow-400/10"
+        >
+          Soporte Técnico
+        </a>
+
+        <button id="menu-toggle" class="lg:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors" aria-label="Abrir menú">
+          <svg id="icon-open" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 8h16M4 16h16"></path>
+          </svg>
+          <svg id="icon-close" class="hidden" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </ContentWidth>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-[#050505] z-40 flex flex-col items-center justify-center translate-x-full transition-transform duration-300 lg:hidden">
+    <nav class="flex flex-col items-center gap-8">
+      <a href="/" class="text-2xl font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Inicio</a>
+      <a href="#nosotros" class="text-2xl font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Nosotros</a>
+      <a href="#servicios" class="text-2xl font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Servicios</a>
+      <a href="#productos" class="text-2xl font-black uppercase tracking-[0.2em] text-white hover:text-yellow-400 transition-colors">Equipos</a>
+      <a href="#contacto" class="mt-4 inline-flex items-center rounded-xl bg-yellow-400 px-8 py-4 text-xs font-black uppercase text-black">
+        Contacto Directo
+      </a>
+    </nav>
   </div>
 </header>
+
+<style>
+  :global(body.overflow-hidden) {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  const body = document.body;
+
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    mobileMenu?.classList.toggle('translate-x-full', !isMenuOpen);
+    mobileMenu?.classList.toggle('translate-x-0', isMenuOpen);
+    iconOpen?.classList.toggle('hidden', isMenuOpen);
+    iconClose?.classList.toggle('hidden', !isMenuOpen);
+    body.classList.toggle('overflow-hidden', isMenuOpen);
+  }
+
+  menuToggle?.addEventListener('click', toggleMenu);
+
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+</script>

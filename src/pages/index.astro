@@ -6,21 +6,17 @@ import ServiceChannels from "../sections/ServiceChannels.astro";
 import HowToWork from "../sections/HowToWork.astro";
 
 import { services } from "../data-list/services";
+import Hero from "../sections/Hero.astro";
 ---
 
 <BaseLayout>
-  <div class="banner-wrapper">
-    <img
-      src="/images/principal-banner.webp"
-      alt="Banner proyectores Servitec"
-    />
-  </div>
+  <Hero/>
 
-  <Services items={services}/>
+  <Services id="servicios" items={services}/>
 
-  <ServiceChannels/>
+  <ServiceChannels id="problemas"/>
 
-  <HowToWork/>
+  <HowToWork id="nosotros"/>
 
   <CTA/>
 </BaseLayout>

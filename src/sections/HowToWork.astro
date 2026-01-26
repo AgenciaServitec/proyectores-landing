@@ -10,61 +10,64 @@ interface Props {
 }
 
 const {
-  title = "Cómo trabajamos",
-  description = "Un proceso claro para que sepas qué sigue desde el primer mensaje hasta la entrega.",
+  title = "Tu proyector listo en 4 pasos",
+  description = "Un proceso transparente diseñado para devolverte la mejor calidad de imagen sin complicaciones.",
   steps = [
-    { title: "1) Nos escribes", description: "Cuéntanos la falla, marca/modelo y tu ubicación. (WhatsApp o formulario)" },
-    { title: "2) Diagnóstico", description: "Revisamos el equipo y te indicamos opciones, tiempos y costo estimado." },
-    { title: "3) Reparación / servicio", description: "Realizamos el trabajo con repuestos de calidad y pruebas." },
-    { title: "4) Entrega y garantía", description: "Te entregamos el equipo funcionando y con respaldo del servicio." },
+    { title: "Contacto", description: "Envíanos marca, modelo y falla por WhatsApp o formulario." },
+    { title: "Diagnóstico", description: "Evaluación técnica precisa con presupuesto detallado y tiempos." },
+    { title: "Reparación", description: "Intervención técnica con repuestos originales y pruebas de estrés." },
+    { title: "Garantía", description: "Entrega de equipo certificado con respaldo total de nuestro servicio." },
   ],
 } = Astro.props;
 ---
 
-<section class="mb-20">
+<section class="py-24 text-white">
   <ContentWidth>
-    <header class="max-w-2xl">
-      <h2 class="text-2xl font-semibold md:text-3xl">{title}</h2>
-      <p class="mt-3 text-[color:var(--color-muted)]">{description}</p>
+    <header class="max-w-3xl mb-16">
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+        Proceso de <span class="text-yellow-400">Servicio Certificado</span>
+      </h2>
+      <p class="mt-4 text-gray-400 text-lg">{description}</p>
     </header>
 
-    <div class="mt-10 grid gap-4 lg:grid-cols-4">
-      {steps.map((step) => (
-        <div
-          class="
-            rounded-[var(--radius-lg)]
-            border border-[color:var(--color-border)]
-            bg-[color:var(--color-card)]
-            p-6 shadow-[var(--shadow-card)]
-          "
-        >
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-base font-semibold">{step.title}</h3>
-            <span class="h-2 w-2 rounded-full bg-[color:var(--color-primary)]"></span>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative">
+      {steps.map((step, index) => (
+        <div class="relative group">
+          <div class="mb-6 flex items-center gap-4">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full border border-yellow-400/30 bg-yellow-400/10 text-xl font-black text-yellow-400 group-hover:bg-yellow-400 group-hover:text-black transition-all duration-300">
+              {index + 1}
+            </span>
+            <div class="h-[1px] flex-1 bg-gradient-to-r from-yellow-400/30 to-transparent hidden lg:block"></div>
           </div>
-          <p class="mt-2 text-sm text-[color:var(--color-muted)]">{step.description}</p>
+
+          <h3 class="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+            {step.title}
+          </h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            {step.description}
+          </p>
         </div>
       ))}
     </div>
 
-    <div class="mt-8 flex flex-col gap-3 rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 md:flex-row md:items-center md:justify-between">
-      <p class="text-sm text-[color:var(--color-muted)]">
-        Tip: si puedes, adjunta una foto del proyector o del mensaje de error para acelerar el diagnóstico.
-      </p>
-      <a
-        href="/cotizar"
-        class="
-          inline-flex items-center justify-center
-          rounded-[var(--radius-md)]
-          border border-[color:var(--color-border)]
-          px-5 py-2.5 font-medium
-          text-[color:var(--color-foreground)]
-          transition hover:border-[color:var(--color-accent)]
-          hover:text-[color:var(--color-accent)]
-        "
-      >
-        Ir al formulario
-      </a>
+    <div class="mt-20 relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 md:p-12">
+      <div class="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-yellow-400/5 blur-[100px]"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div class="max-w-xl">
+          <p class="text-yellow-400 font-bold text-sm uppercase tracking-widest mb-2">Consejo de experto</p>
+          <p class="text-gray-200 text-lg leading-snug">
+            ¿Quieres un presupuesto más rápido? Adjunta una <span class="text-white font-bold text-xl uppercase">foto</span> del error o del modelo del equipo.
+          </p>
+        </div>
+
+        <a
+          href="/cotizar"
+          class="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-black text-black transition-all hover:bg-yellow-400 hover:scale-105 active:scale-95 whitespace-nowrap"
+        >
+          Iniciar Cotización
+        </a>
+      </div>
     </div>
   </ContentWidth>
 </section>

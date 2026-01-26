@@ -10,111 +10,78 @@ interface Props {
 }
 
 const {
-  title = "Formas de atención",
-  description = "Elige la opción más cómoda. Te atendemos por WhatsApp, en taller o coordinamos recojo/entrega.",
+  title = "Cómo trabajamos",
+  description = "Soluciones ágiles adaptadas a tu tiempo. Elige la modalidad que prefieras.",
   whatsappLink = "https://wa.me/51941801827?text=Hola%20Servitec,%20necesito%20ayuda%20con%20mi%20proyector.",
-  address = "Chorrillos, Lima (referencia: Av. Fernando Terán)",
+  address = "Chorrillos, Lima",
   schedule = "Lun–Vie 09:00 – 18:00",
 } = Astro.props;
 ---
 
-<section class="mb-20">
+<section class="py-24  text-white">
   <ContentWidth>
-    <header class="max-w-2xl">
-      <h2 class="text-2xl font-semibold md:text-3xl">{title}</h2>
-      <p class="mt-3 text-[color:var(--color-muted)]">{description}</p>
+    <header class="max-w-3xl mb-14">
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight italic">
+        {title}<span class="text-yellow-400">.</span>
+      </h2>
+      <p class="mt-4 text-gray-400 text-lg">{description}</p>
     </header>
 
-    <div class="mt-10 grid gap-4 lg:grid-cols-3">
-      <!-- WhatsApp -->
-      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
-        <div class="flex items-center justify-between gap-4">
-          <h3 class="text-lg font-semibold">WhatsApp</h3>
-          <span class="rounded-full bg-[color:var(--color-surface)] px-2.5 py-1 text-xs text-[color:var(--color-muted-2)]">
-            Recomendado
+    <div class="grid gap-6 lg:grid-cols-3">
+
+      <div class="group relative rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-8 transition-all hover:bg-yellow-400/[0.08]">
+        <div class="flex items-center justify-between mb-6">
+          <div class="h-12 w-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.389l-.72 2.634 2.7-.707c.813.447 1.742.7 2.727.7 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.767-5.767-5.767zm3.39 8.201c-.147.412-.85.758-1.159.805-.309.048-.68.086-2.115-.494-1.838-.74-3.023-2.613-3.115-2.738-.093-.125-.756-.999-.756-1.921 0-.922.483-1.375.654-1.562.171-.188.375-.234.5-.234.125 0 .25 0 .359.005.114.005.266-.042.417.317.156.375.531 1.297.578 1.391.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.197.245-.281.328-.094.094-.192.197-.083.385.109.188.485.799 1.04 1.291.714.634 1.314.831 1.502.924.188.094.297.078.406-.047.109-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.312.141.359.219.048.078.048.452-.099.864z"/></svg>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-400 px-3 py-1 rounded-full border border-yellow-400/20">
+            Respuesta Inmediata
           </span>
         </div>
-        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
-          Envíanos la falla y el modelo. Te respondemos con opciones y pasos a seguir.
+        <h3 class="text-xl font-bold mb-3">WhatsApp Directo</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+          Envíanos fotos de la falla y el modelo de tu equipo. Recibe un pre-diagnóstico y opciones de solución en minutos.
         </p>
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="
-            mt-5 inline-flex w-full items-center justify-center
-            rounded-[var(--radius-md)]
-            bg-[color:var(--color-primary)]
-            px-5 py-3 font-medium text-black
-            transition hover:bg-[color:var(--color-primary-hover)]
-            focus:outline-none focus:ring-2 focus:ring-[color:var(--color-ring)]
-          "
-        >
-          Escribir por WhatsApp
+        <a href={whatsappLink} target="_blank" class="flex w-full items-center justify-center rounded-xl bg-yellow-400 py-4 text-sm font-bold text-black transition-transform hover:scale-[1.02] active:scale-95">
+          Escribir ahora
         </a>
       </div>
 
-      <!-- Taller -->
-      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
-        <h3 class="text-lg font-semibold">Atención en taller</h3>
-        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
-          Puedes acercarte con tu equipo para evaluación. Coordinamos la recepción y tiempos.
-        </p>
-        <div class="mt-5 space-y-2 text-sm text-[color:var(--color-muted-2)]">
-          <p><span class="text-[color:var(--color-foreground)] font-medium">Ubicación:</span> {address}</p>
-          <p><span class="text-[color:var(--color-foreground)] font-medium">Horario:</span> {schedule}</p>
+      <div class="group relative rounded-2xl border border-white/5 bg-white/[0.03] p-8 transition-all hover:bg-white/[0.06]">
+        <div class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-yellow-400 group-hover:text-black transition-colors">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10V11a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10"/></svg>
         </div>
-        <a
-          href="/contacto"
-          class="
-            mt-5 inline-flex w-full items-center justify-center
-            rounded-[var(--radius-md)]
-            border border-[color:var(--color-border)]
-            px-5 py-3 font-medium
-            transition hover:border-[color:var(--color-accent)]
-            hover:text-[color:var(--color-accent)]
-          "
-        >
-          Ver contacto
-        </a>
-      </div>
-
-      <!-- Recojo -->
-      <div class="rounded-[var(--radius-lg)] border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 shadow-[var(--shadow-card)]">
-        <h3 class="text-lg font-semibold">Recojo y entrega</h3>
-        <p class="mt-2 text-sm text-[color:var(--color-muted)]">
-          Si estás en Lima, coordinamos recojo/entrega (según zona). Ideal para colegios y empresas.
+        <h3 class="text-xl font-bold mb-3">Atención en Sede</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Visítanos para una revisión técnica exhaustiva. Contamos con laboratorio propio y stock de repuestos.
         </p>
-
-        <ul class="mt-5 space-y-2 text-sm text-[color:var(--color-muted-2)]">
-          <li class="flex gap-2">
-            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
-            Coordinación por WhatsApp
-          </li>
-          <li class="flex gap-2">
-            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
-            Para equipos grandes / salas
-          </li>
-          <li class="flex gap-2">
-            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]"></span>
-            Atención a empresas y colegios
-          </li>
-        </ul>
-
-        <a
-          href="/cotizar"
-          class="
-            mt-5 inline-flex w-full items-center justify-center
-            rounded-[var(--radius-md)]
-            border border-[color:var(--color-border)]
-            px-5 py-3 font-medium
-            transition hover:border-[color:var(--color-accent)]
-            hover:text-[color:var(--color-accent)]
-          "
-        >
-          Cotizar recojo
+        <div class="space-y-3 mb-8 text-xs font-medium text-gray-500 uppercase tracking-wide">
+          <p class="flex items-center gap-2"><span class="text-yellow-400">📍</span> {address}</p>
+          <p class="flex items-center gap-2"><span class="text-yellow-400">🕒</span> {schedule}</p>
+        </div>
+        <a href="/contacto" class="flex w-full items-center justify-center rounded-xl border border-white/20 py-4 text-sm font-bold text-white transition-colors hover:bg-white hover:text-black">
+          Cómo llegar
         </a>
       </div>
+
+      <div class="group relative rounded-2xl border border-white/5 bg-white/[0.03] p-8 transition-all hover:bg-white/[0.06]">
+        <div class="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-yellow-400 group-hover:text-black transition-colors">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l3 1.66 3 1.67V19a2 2 0 0 1-2 2h-1M7 19.22V21h3v-1.78a2 2 0 1 0-3 0zM17 19.22V21h3v-1.78a2 2 0 1 0-3 0zM10 9h4"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Recojo Corporativo</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Ideal para instituciones y empresas. Coordinamos el retiro de equipos en Lima para mantenimiento masivo.
+        </p>
+        <ul class="space-y-2 mb-8 text-xs font-semibold text-gray-300">
+          <li class="flex items-center gap-2">✓ Atención a Colegios y Universidades</li>
+          <li class="flex items-center gap-2">✓ Recojo Programado en Oficina</li>
+          <li class="flex items-center gap-2">✓ Facturación Electrónica</li>
+        </ul>
+        <a href="/cotizar" class="flex w-full items-center justify-center rounded-xl border border-white/20 py-4 text-sm font-bold text-white transition-colors hover:bg-white hover:text-black">
+          Solicitar Recojo
+        </a>
+      </div>
+
     </div>
   </ContentWidth>
 </section>

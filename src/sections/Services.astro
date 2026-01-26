@@ -2,156 +2,82 @@
 import ContentWidth from "../components/ui/ContentWidth.astro";
 
 const problems = [
-  { title: "Imagen borrosa", description: "Enfoque, lente, polvo interno o lámpara desgastada.", icon: "focus", tag: "Frecuente" },
-  { title: "Imagen con puntos", description: "Posible daño en panel, polvo o ruta óptica.", icon: "pixels" },
-  { title: "Imagen distorsionada", description: "Configuración, lente, prisma o componente interno.", icon: "distortion" },
-  { title: "La lámpara no funciona", description: "Compatibilidad, lámpara agotada o balastro.", icon: "lamp", tag: "Rápido" },
-  { title: "Mensaje: Sin señal", description: "HDMI/VGA, entrada incorrecta o placa de video.", icon: "signal" },
-  { title: "El proyector sobrecalienta", description: "Ventilación, filtros, pasta térmica o ventiladores.", icon: "heat", tag: "Urgente" },
-  { title: "Se apaga y reinicia", description: "Fuente, temperatura o protección interna.", icon: "power" },
+  { title: "Imagen borrosa", description: "Falta de nitidez, lentes sucios o lámpara agotada.", icon: "focus", tag: "Frecuente" },
+  { title: "Puntos en pantalla", description: "Puntos blancos o negros por daño en chip DMD o polvo.", icon: "pixels" },
+  { title: "Sin señal / Error HDMI", description: "No reconoce entradas de video o puertos dañados.", icon: "signal" },
+  { title: "Lámpara no enciende", description: "Fin de vida útil, error de balastro o explosión.", icon: "lamp", tag: "Urgente" },
+  { title: "Sobrecalentamiento", description: "Limpieza profunda de ventiladores y cambio de pasta.", icon: "heat", tag: "Mantenimiento" },
+  { title: "Se apaga solo", description: "Fallos en la fuente de poder o sensores térmicos.", icon: "power" },
 ];
 
 const toSlug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 ---
 
-<section class="py-20">
+<section class="py-24  text-white">
   <ContentWidth>
-    <header class="max-w-2xl">
-      <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-surface)] px-3 py-1 text-xs text-[color:var(--color-muted-2)]">
-        <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--color-primary)]"></span>
-        Servicios
-      </div>
-
-      <h2 class="mt-4 text-2xl font-semibold md:text-4xl">
-        Problemas comunes que solucionamos
-      </h2>
-      <p class="mt-3 text-[color:var(--color-muted)]">
-        Selecciona el síntoma más parecido y cotiza en 1 minuto.
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <header class="max-w-2xl">
+        <span class="text-yellow-400 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
+          Diagnóstico Especializado
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight">
+          ¿Qué le sucede a <br/> <span class="text-gray-500">tu proyector?</span>
+        </h2>
+      </header>
+      <p class="text-gray-400 max-w-sm text-lg leading-relaxed">
+        Identifica el problema y recibe una cotización inmediata con repuestos originales.
       </p>
-    </header>
+    </div>
 
-    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {problems.map((p) => (
         <a
           href={`/cotizar?problema=${toSlug(p.title)}`}
-          class="group relative overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--color-border-soft)] bg-[color:var(--color-card)] p-8 shadow-[var(--shadow-soft)] transition hover:bg-[color:var(--color-card-2)] hover:border-[color:var(--color-border)]"
+          class="group relative block overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all duration-300 hover:bg-white/[0.05] hover:border-yellow-400/30"
         >
-          <!-- Icono grande tenue (marca de agua) -->
-          <div class="pointer-events-none absolute -right-6 -bottom-6 opacity-[0.08] text-white">
-            <div class="h-28 w-28">
+          <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-400/5 blur-3xl transition-opacity opacity-0 group-hover:opacity-100"></div>
+
+          <div class="flex items-start justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 text-black shadow-lg shadow-yellow-400/20 group-hover:scale-110 transition-transform">
               {p.icon === "focus" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="12" cy="12" r="4"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 12h2m14 0h2M12 3v2m0 14v2"/></svg>
               )}
               {p.icon === "lamp" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5a7 7 0 0 0-4-12z"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>
               )}
               {p.icon === "heat" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <path d="M14 14a2 2 0 1 1-4 0V6a2 2 0 1 1 4 0z"/><path d="M12 2v2"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v14m0 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
               )}
               {p.icon === "signal" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <path d="M2 12h4M18 12h4"/><path d="M8 6l8 12"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12h5m10 0h5M7.5 7l9 10M16.5 7l-9 10"/></svg>
               )}
               {p.icon === "pixels" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <rect x="4" y="4" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/>
-                </svg>
-              )}
-              {p.icon === "distortion" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <path d="M3 12c3-4 6 4 9 0s6 4 9 0"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="14" y="3" width="4" height="4" rx="1"/><rect x="3" y="14" width="4" height="4" rx="1"/></svg>
               )}
               {p.icon === "power" && (
-                <svg viewBox="0 0 24 24" class="h-full w-full" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <path d="M12 2v10"/><circle cx="12" cy="14" r="8"/>
-                </svg>
-              )}
-            </div>
-          </div>
-
-          <!-- Top row -->
-          <div class="flex items-start justify-between gap-4">
-            <div class="
-  flex h-11 w-11 items-center justify-center
-  rounded-[var(--radius-md)]
-  border border-[color:var(--color-border-soft)]
-  bg-[color:var(--color-surface)]
-  text-[color:var(--color-muted-2)]
-  transition
-  group-hover:text-[color:var(--color-primary)]
-">
-
-            {p.icon === "focus" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <circle cx="11" cy="11" r="3.6"/><path d="M2.5 11h3M16.5 11h3M11 2.5v3M11 16.5v3"/>
-                </svg>
-              )}
-              {p.icon === "lamp" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M8.5 16.5h5M9.5 20h3"/><path d="M11 2a6.2 6.2 0 0 0-3.6 10.7c.5.5.8 1.3.8 2.1h5.6c0-.8.3-1.6.8-2.1A6.2 6.2 0 0 0 11 2z"/>
-                </svg>
-              )}
-              {p.icon === "heat" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M13 13a1.8 1.8 0 1 1-3.6 0V6a1.8 1.8 0 1 1 3.6 0z"/><path d="M11.2 2v2"/>
-                </svg>
-              )}
-              {p.icon === "signal" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M2 11h4M16 11h4"/><path d="M8 6l6.5 10"/>
-                </svg>
-              )}
-              {p.icon === "pixels" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="3.5" y="3.5" width="6" height="6"/><rect x="12.5" y="12.5" width="6" height="6"/>
-                </svg>
-              )}
-              {p.icon === "distortion" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M3 11c3-3.5 6 3.5 9 0s6 3.5 9 0"/>
-                </svg>
-              )}
-              {p.icon === "power" && (
-                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M11 2v8"/><circle cx="11" cy="13" r="7.5"/>
-                </svg>
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/></svg>
               )}
             </div>
 
             {p.tag && (
-              <span class="
-  rounded-full
-  border border-[color:var(--color-border-soft)]
-  bg-[color:var(--color-surface)]
-  px-3 py-1 text-xs
-  text-[color:var(--color-muted-2)]
-">
-  {p.tag}
-</span>
-
+              <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">
+                {p.tag}
+              </span>
             )}
           </div>
 
-          <h3 class="mt-6 text-lg font-semibold">
+          <h3 class="mt-8 text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
             {p.title}
           </h3>
 
-          <p class="mt-3 text-sm leading-relaxed text-[color:var(--color-muted)]">
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">
             {p.description}
           </p>
 
-          <div class="mt-8 flex items-center justify-between text-sm">
-            <span class="texfont-mediumt-xs text-[color:var(--color-muted-2)]">Diagnóstico técnico</span>
-            <span class="font-medium text-[color:var(--color-primary)] underline-offset-4 group-hover:underline">
-              Cotizar ahora →
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-gray-500">Soporte Técnico</span>
+            <span class="text-sm font-bold text-yellow-400 inline-flex items-center gap-2">
+              Cotizar <span class="group-hover:translate-x-1 transition-transform">→</span>
             </span>
           </div>
         </a>
