@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/hero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sections/Hero.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.astro/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/types.d.ts" afterDir="false" />
+    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="improve design 1">
+      <change afterPath="$PROJECT_DIR$/public/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hero.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Form.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.astro/data-store.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/data-store.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Footer.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Header.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/CTA.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/CTA.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/Hero.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Hero.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/HowToWork.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/HowToWork.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/ServiceChannels.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/ServiceChannels.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/Services.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Services.astro" afterDir="false" />
@@ -59,7 +62,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "update__project",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/Angel/WebstormProjects/proyectores-landing",
+    "last_opened_file_path": "C:/Users/Owner/WebstormProjects/proyectores-landing/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,7 +75,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public" />
       <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public\images" />
     </key>
   </component>
@@ -102,7 +109,8 @@
       <workItem from="1757973572933" duration="88000" />
       <workItem from="1769462173070" duration="63000" />
       <workItem from="1769462250592" duration="430000" />
-      <workItem from="1769462698315" duration="3718000" />
+      <workItem from="1769462698315" duration="3786000" />
+      <workItem from="1769529225784" duration="7289000" />
     </task>
     <task id="LOCAL-00001" summary="Add: added alt attribute to image element and updated services.js">
       <option name="closed" value="true" />
@@ -112,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735322789978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="improve design 1">
+      <option name="closed" value="true" />
+      <created>1769466510086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769466510088</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add: added alt attribute to image element and updated services.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: added alt attribute to image element and updated services.js" />
+    <MESSAGE value="improve design 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve design 1" />
   </component>
 </project>

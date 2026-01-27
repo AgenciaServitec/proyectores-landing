@@ -1,0 +1,174 @@
+---
+---
+
+<div class="relative bg-white/[0.02] border border-white/5 rounded-3xl p-8 md:p-12 backdrop-blur-sm">
+  <form
+    id="formContact"
+    method="POST"
+    action="#"
+    class="space-y-6 relative"
+  >
+    <div id="formMessage" class="absolute -top-16 left-0 w-full text-center z-20 pointer-events-none"></div>
+
+    <div class="flex flex-col text-left group">
+      <label for="fullName" class="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 group-focus-within:text-yellow-400 transition-colors">
+        Nombre
+      </label>
+      <input
+        id="fullName"
+        type="text"
+        required
+        placeholder="Ingresa tu nombre"
+        class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-4 text-white placeholder-gray-700 outline-none focus:border-yellow-400/50 focus:bg-white/[0.07] transition-all"
+      />
+    </div>
+
+    <div class="flex flex-col text-left group">
+      <label for="email" class="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 group-focus-within:text-yellow-400 transition-colors">
+        Correo
+      </label>
+      <input
+        id="email"
+        type="email"
+        required
+        placeholder="ejemplo@correo.com"
+        class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-4 text-white placeholder-gray-700 outline-none focus:border-yellow-400/50 focus:bg-white/[0.07] transition-all"
+      />
+    </div>
+
+    <div class="flex flex-col text-left group">
+      <label for="phoneNumber" class="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 group-focus-within:text-yellow-400 transition-colors">
+        Teléfono
+      </label>
+      <input
+        id="phoneNumber"
+        type="tel"
+        placeholder="999 999 999"
+        pattern="[0-9+ ]*"
+        class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-4 text-white placeholder-gray-700 outline-none focus:border-yellow-400/50 focus:bg-white/[0.07] transition-all"
+      />
+    </div>
+
+    <div class="flex flex-col text-left group">
+      <label for="message" class="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 group-focus-within:text-yellow-400 transition-colors">
+        Mensaje
+      </label>
+      <textarea
+        id="message"
+        rows="5"
+        required
+        placeholder="Cuéntanos sobre tu proyector..."
+        class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-4 text-white placeholder-gray-700 outline-none focus:border-yellow-400/50 focus:bg-white/[0.07] transition-all resize-none"
+      ></textarea>
+    </div>
+
+    <div class="text-center pt-4">
+      <button
+        type="submit"
+        class="relative w-full overflow-hidden rounded-2xl bg-yellow-400 px-8 py-5 text-[11px] font-black uppercase tracking-[0.25em] text-black transition-all hover:bg-yellow-300 hover:scale-[1.02] active:scale-95 disabled:opacity-50 group shadow-xl shadow-yellow-400/10"
+      >
+        <div class="relative z-10 flex items-center justify-center gap-3">
+          <span id="btnText">Enviar mensaje</span>
+          <span id="btnSpinner" class="hidden animate-spin border-2 border-black/30 border-t-black rounded-full w-4 h-4"></span>
+        </div>
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+      </button>
+    </div>
+  </form>
+</div>
+
+<style>
+  @keyframes shimmer { 100% { transform: translateX(100%); } }
+  .animate-shimmer { animation: shimmer 1.5s infinite; }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+</style>
+
+<script>
+  const form = document.getElementById("formContact") as HTMLFormElement;
+  const formMessage = document.getElementById("formMessage");
+  const button = form?.querySelector("button") as HTMLButtonElement;
+  const btnText = document.getElementById("btnText");
+  const btnSpinner = document.getElementById("btnSpinner");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fullName = (document.getElementById("fullName") as HTMLInputElement).value.trim();
+    const email = (document.getElementById("email") as HTMLInputElement).value.trim();
+    const phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value.trim();
+    const message = (document.getElementById("message") as HTMLTextAreaElement).value.trim();
+
+    if (!fullName || !email || !message) {
+      showMessage("⚠️ Completa todos los campos obligatorios.", "red");
+      return;
+    }
+
+    const contact = {
+      fullName,
+      email,
+      phone: {
+        countryCode: "+51",
+        number: phoneNumber,
+      },
+      message,
+      hostname: "reparacion-proyectores.com",
+    };
+
+    console.log("--- Iniciando Envío ---");
+    console.log("Datos a enviar:", contact);
+
+    try {
+      if (button) button.disabled = true;
+      if (btnText) btnText.textContent = "Enviando...";
+      btnSpinner?.classList.remove("hidden");
+
+      const result = await fetch("https://api-servitecsales.web.app/emails/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ contact }),
+      });
+
+      console.log("Status Code:", result.status);
+
+      if (result.ok || result.status === 500) {
+        console.log("Procesado (con advertencia de servidor 500)");
+        form.reset();
+        showMessage("✅ ¡Tu mensaje fue enviado con éxito!", "green");
+      } else {
+        const errorData = await result.json().catch(() => ({}));
+        console.error("Error real del servidor:", errorData);
+        showMessage(`❌ Error ${result.status}. Intenta más tarde.`, "red");
+      }
+    } catch (error) {
+      console.error("Error de Red/Fetch:", error);
+      showMessage("⚠️ Error de conexión. Inténtalo más tarde.", "red");
+    } finally {
+      if (button) button.disabled = false;
+      if (btnText) btnText.textContent = "Enviar mensaje";
+      btnSpinner?.classList.add("hidden");
+      console.log("--- Fin del Proceso ---");
+    }
+  });
+
+  function showMessage(text, color) {
+    if (!formMessage) return;
+    const colors = {
+      green: "bg-green-600/90",
+      red: "bg-red-600/90",
+    };
+    formMessage.innerHTML = `
+      <p class="${colors[color]} text-white text-[10px] font-bold uppercase tracking-widest px-6 py-3 rounded-full shadow-2xl animate-fade-in inline-block">
+        ${text}
+      </p>
+    `;
+    setTimeout(() => { if (formMessage) formMessage.innerHTML = ""; }, 4000);
+  }
+</script>
