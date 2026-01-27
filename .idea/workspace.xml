@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="improve design 1">
-      <change afterPath="$PROJECT_DIR$/public/hero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/hero.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Form.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.astro/data-store.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/data-store.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Footer.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Header.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/CTA.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/CTA.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/Hero.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Hero.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/HowToWork.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/HowToWork.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/ServiceChannels.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/ServiceChannels.astro" afterDir="false" />
+    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="improve design 2">
       <change beforePath="$PROJECT_DIR$/src/sections/Services.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Services.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +96,7 @@
       <workItem from="1769462173070" duration="63000" />
       <workItem from="1769462250592" duration="430000" />
       <workItem from="1769462698315" duration="3786000" />
-      <workItem from="1769529225784" duration="7289000" />
+      <workItem from="1769529225784" duration="7361000" />
     </task>
     <task id="LOCAL-00001" summary="Add: added alt attribute to image element and updated services.js">
       <option name="closed" value="true" />
@@ -128,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769466510088</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="improve design 2">
+      <option name="closed" value="true" />
+      <created>1769536872874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769536872874</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add: added alt attribute to image element and updated services.js" />
     <MESSAGE value="improve design 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve design 1" />
+    <MESSAGE value="improve design 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve design 2" />
   </component>
 </project>
