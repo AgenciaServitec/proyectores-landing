@@ -46,15 +46,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#9 on update__project",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/Owner/WebstormProjects/proyectores-landing/public",
+    "last_opened_file_path": "C:/Users/Angel/WebstormProjects/proyectores-landing",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Owner\\WebstormProjects\\proyectores-landing\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Angel\\WebstormProjects\\proyectores-landing\\node_modules\\prettier",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -93,10 +93,6 @@
       <workItem from="1757369232597" duration="259000" />
       <workItem from="1757973504116" duration="45000" />
       <workItem from="1757973572933" duration="88000" />
-      <workItem from="1769462173070" duration="63000" />
-      <workItem from="1769462250592" duration="430000" />
-      <workItem from="1769462698315" duration="3786000" />
-      <workItem from="1769529225784" duration="7361000" />
     </task>
     <task id="LOCAL-00001" summary="Add: added alt attribute to image element and updated services.js">
       <option name="closed" value="true" />
