@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.astro/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/settings.json" afterDir="false" />
+    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="refactored import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -56,6 +60,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public" />
+      <recent name="C:\Users\Owner\WebstormProjects\proyectores-landing\public\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,14 +102,52 @@
       <option name="project" value="LOCAL" />
       <updated>1735322789978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="improve design 1">
+      <option name="closed" value="true" />
+      <created>1769466510086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769466510088</updated>
+    </task>
+    <task id="LOCAL-00003" summary="improve design 2">
+      <option name="closed" value="true" />
+      <created>1769536872874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769536872874</updated>
+    </task>
+    <task id="LOCAL-00004">
+      <option name="closed" value="true" />
+      <created>1769810609775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769810609775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add: added alt attribute to image element and updated services.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: added alt attribute to image element and updated services.js" />
+    <MESSAGE value="improve design 1" />
+    <MESSAGE value="improve design 2" />
+    <MESSAGE value="refactored import" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored import" />
   </component>
 </project>

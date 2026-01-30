@@ -1,0 +1,154 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9ef206e9-c4fe-4a85-8b1f-b107a2f04219\" name=\"Changes\" comment=\"refactored code\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/CTA.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/CarouselProducts.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/HowToWork.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/SeoSection.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/ServiceChannels.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/sections/Services.astro\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/styles/global.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.astro/settings.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.astro/settings.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/astro.config.mjs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/astro.config.mjs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/package.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pnpm-lock.yaml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/contact/ContactFormComponent.css\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/contact/ContactFormComponent.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/home/AboutUs.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/sections/About.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/home/CarouselProducts.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/home/FilterProducts.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/home/FilterProducts.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/home/SeoSection.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/home/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Button.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/ui/Button.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/ButtonFloating.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/ui/ButtonFloating.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/ButtonFloatingContact.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/ButtonJsx.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/CardProduct.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/ui/CardProduct.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Divider.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Form.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/IconFontAwesome.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/IconItem.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Input.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/SectionWrapper.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/ui/ContentWidth.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Textarea.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Title.astro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/data-list/services.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/data-list/services.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/hooks/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/hooks/useVisibleDrawer.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/layouts/BaseLayout.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/layouts/BaseLayout.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/layouts/Drawer.jsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/layouts/Footer.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/layouts/Footer.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/layouts/Header.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/layouts/Header.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/layouts/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/about-us/index.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/about/index.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/api/contact.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/contact/index.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/contact/index.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/index.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/index.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/services/index.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/services/index.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/success/index.astro\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/success/index.astro\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/styles/theme/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/styles/theme/theme.js\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Astro Component\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;AngelDev2001&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/AgenciaServitec/proyectores-landing.git&quot;,\r\n    &quot;accountId&quot;: &quot;eed1d776-978f-4f57-88e8-2aa6e801d3a7&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2qoHF8H5ThV7PA4v1DRbr0F9Pl2\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"update__project\",\r\n    \"last_opened_file_path\": \"C:/Users/Angel/WebstormProjects/proyectores-landing/src\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"pnpm\",\r\n    \"prettierjs.PrettierConfiguration.Package\": \"C:\\\\Users\\\\Angel\\\\WebstormProjects\\\\proyectores-landing\\\\node_modules\\\\prettier\",\r\n    \"ts.external.directory.path\": \"C:\\\\Program Files\\\\JetBrains\\\\WebStorm 2024.3.1\\\\plugins\\\\javascript-plugin\\\\jsLanguageServicesImpl\\\\external\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Angel\\WebstormProjects\\proyectores-landing\\src\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Angel\\WebstormProjects\\proyectores-landing\\src\\sections\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9ef206e9-c4fe-4a85-8b1f-b107a2f04219\" name=\"Changes\" comment=\"\" />\r\n      <created>1735321901161</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1735321901161</updated>\r\n      <workItem from=\"1735321902666\" duration=\"47000\" />\r\n      <workItem from=\"1735321973870\" duration=\"870000\" />\r\n      <workItem from=\"1735336834833\" duration=\"2183000\" />\r\n      <workItem from=\"1735579990811\" duration=\"125000\" />\r\n      <workItem from=\"1756494101327\" duration=\"1894000\" />\r\n      <workItem from=\"1768583610834\" duration=\"601000\" />\r\n      <workItem from=\"1769190027845\" duration=\"2853000\" />\r\n      <workItem from=\"1769449251499\" duration=\"8479000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Add: added alt attribute to image element and updated services.js\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1735322789978</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1735322789978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"added scripts GTM\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1756495568276</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1756495568276</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"refactored code\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1756495578243</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1756495578243</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Add: added alt attribute to image element and updated services.js\" />\r\n    <MESSAGE value=\"added scripts GTM\" />\r\n    <MESSAGE value=\"refactored code\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"refactored code\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d2f7498687e6fe7cd6898a0aa6a3fece2db1e9fa)
++++ b/.idea/workspace.xml	(date 1769810189619)
+@@ -4,57 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="refactored code">
+-      <change afterPath="$PROJECT_DIR$/src/sections/CTA.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sections/CarouselProducts.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sections/HowToWork.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sections/SeoSection.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sections/ServiceChannels.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/sections/Services.astro" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.astro/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/settings.json" afterDir="false" />
++    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactFormComponent.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactFormComponent.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/home/AboutUs.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/About.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/home/CarouselProducts.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/home/FilterProducts.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/FilterProducts.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/home/SeoSection.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/home/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Button.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/ButtonFloating.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/ButtonFloating.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/ButtonFloatingContact.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/ButtonJsx.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/CardProduct.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/CardProduct.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Divider.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Form.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/IconFontAwesome.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/IconItem.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Input.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/SectionWrapper.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/ContentWidth.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Textarea.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Title.astro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/data-list/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-list/services.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/hooks/useVisibleDrawer.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BaseLayout.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/layouts/Drawer.jsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/layouts/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Footer.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/layouts/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Header.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/layouts/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/about-us/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/api/contact.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/index.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/services/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/services/index.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/success/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/success/index.astro" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/styles/theme/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/styles/theme/theme.js" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -100,7 +51,7 @@
+   "keyToString": {
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "update__project",
++    "git-widget-placeholder": "#9 on update__project",
+     "last_opened_file_path": "C:/Users/Angel/WebstormProjects/proyectores-landing/src",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+@@ -142,7 +93,11 @@
+       <workItem from="1756494101327" duration="1894000" />
+       <workItem from="1768583610834" duration="601000" />
+       <workItem from="1769190027845" duration="2853000" />
+-      <workItem from="1769449251499" duration="8479000" />
++      <workItem from="1769449251499" duration="10720000" />
++      <workItem from="1769532019410" duration="78000" />
++      <workItem from="1769532774939" duration="1034000" />
++      <workItem from="1769639003276" duration="23000" />
++      <workItem from="1769809167977" duration="801000" />
+     </task>
+     <task id="LOCAL-00001" summary="Add: added alt attribute to image element and updated services.js">
+       <option name="closed" value="true" />
+@@ -168,7 +123,47 @@
+       <option name="project" value="LOCAL" />
+       <updated>1756495578243</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="update astro version and added tailwindcss">
++      <option name="closed" value="true" />
++      <created>1769461754699</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1769461754699</updated>
++    </task>
++    <task id="LOCAL-00005" summary="refactored code">
++      <option name="closed" value="true" />
++      <created>1769461789047</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1769461789047</updated>
++    </task>
++    <task id="LOCAL-00006">
++      <option name="closed" value="true" />
++      <created>1769461821927</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1769461821927</updated>
++    </task>
++    <task id="LOCAL-00007" summary="remove files unnecessary">
++      <option name="closed" value="true" />
++      <created>1769461858382</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1769461858382</updated>
++    </task>
++    <task id="LOCAL-00008" summary="update files">
++      <option name="closed" value="true" />
++      <created>1769461907382</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1769461907382</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -177,7 +172,11 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Add: added alt attribute to image element and updated services.js" />
+     <MESSAGE value="added scripts GTM" />
++    <MESSAGE value="update astro version and added tailwindcss" />
+     <MESSAGE value="refactored code" />
+-    <option name="LAST_COMMIT_MESSAGE" value="refactored code" />
++    <MESSAGE value="remove files unnecessary" />
++    <MESSAGE value="updated files" />
++    <MESSAGE value="update files" />
++    <option name="LAST_COMMIT_MESSAGE" value="update files" />
+   </component>
+ </project>
+\ No newline at end of file

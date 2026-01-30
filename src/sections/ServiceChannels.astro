@@ -1,0 +1,123 @@
+---
+import ContentWidth from "../components/ui/ContentWidth.astro";
+
+interface Props {
+  id?: string;
+  title?: string;
+  description?: string;
+  whatsappLink?: string;
+  address?: string;
+  schedule?: string;
+}
+
+const {
+  id = "chanel-services",
+  title = "Tú eliges cómo",
+  description = "Nos adaptamos a tu ritmo. Contamos con tres modalidades diseñadas para tu comodidad.",
+  whatsappLink = "https://wa.me/51941801827?text=Hola%20Servitec,%20necesito%20ayuda%20con%20mi%20proyector.",
+  address = "Néstor Bermúdez 113, Chorrillos, Lima",
+  schedule = "Lun–Vie 09:00 – 18:00",
+} = Astro.props;
+---
+
+<section id={id} class="py-24 text-white scroll-mt-24">
+  <ContentWidth>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <header class="max-w-2xl">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="h-px w-8 bg-yellow-400"></span>
+          <span class="text-yellow-400 font-bold text-xs uppercase tracking-[0.3em]">Canales de atención</span>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight uppercase">
+          {title} <span class="text-yellow-400">atenderte.</span>
+        </h2>
+        <p class="mt-6 text-gray-400 text-lg leading-relaxed">
+          {description}
+        </p>
+      </header>
+
+      <div class="hidden lg:block pb-2">
+        <div class="flex items-center gap-4 text-sm font-medium text-gray-500 italic">
+          <span>Servicio Técnico Especializado en Proyectores</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <div class="relative group overflow-hidden rounded-3xl border border-yellow-400/30 bg-gradient-to-b from-yellow-400/[0.07] to-transparent p-8 transition-all hover:border-yellow-400/50">
+        <div class="absolute top-0 right-0 p-4">
+          <span class="flex h-2 w-2 rounded-full bg-yellow-400 animate-ping"></span>
+        </div>
+
+        <div class="mb-8 h-14 w-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black shadow-[0_0_20px_rgba(250,204,21,0.3)]">
+          <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.389l-.72 2.634 2.7-.707c.813.447 1.742.7 2.727.7 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.767-5.767-5.767zm3.39 8.201c-.147.412-.85.758-1.159.805-.309.048-.68.086-2.115-.494-1.838-.74-3.023-2.613-3.115-2.738-.093-.125-.756-.999-.756-1.921 0-.922.483-1.375.654-1.562.171-.188.375-.234.5-.234.125 0 .25 0 .359.005.114.005.266-.042.417.317.156.375.531 1.297.578 1.391.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.197.245-.281.328-.094.094-.192.197-.083.385.109.188.485.799 1.04 1.291.714.634 1.314.831 1.502.924.188.094.297.078.406-.047.109-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.312.141.359.219.048.078.048.452-.099.864z"/></svg>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 tracking-tight">WhatsApp <span class="text-yellow-400">Directo</span></h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+          Envíanos fotos de la falla y marca/modelo. Recibe un pre-diagnóstico y presupuesto aproximado en minutos.
+        </p>
+
+        <a href={whatsappLink} target="_blank" class="group/btn relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-yellow-400 py-4 text-xs font-black uppercase tracking-widest text-black transition-all hover:bg-yellow-300 active:scale-95">
+          <span class="relative z-10">Chat de Soporte</span>
+        </a>
+      </div>
+
+      <div class="relative group rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 transition-all hover:border-white/20">
+        <div class="mb-8 h-14 w-14 rounded-2xl bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-500">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10V11a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10"/></svg>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 tracking-tight text-white">Atención en Sede</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Visítanos para una revisión técnica exhaustiva. Laboratorio propio con instrumentos de última generación.
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <span class="text-yellow-400 mt-1">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </span>
+            <span class="text-xs text-gray-300 font-medium">{address}</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-yellow-400 mt-1">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <span class="text-xs text-gray-300 font-medium">{schedule}</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/3k6SdBBmsWCCj2PZ7" target="_blank" class="flex w-full items-center justify-center rounded-xl border border-white/10 py-4 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black">
+          Ver ubicación
+        </a>
+      </div>
+
+      <div class="relative group rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 transition-all hover:border-white/20">
+        <div class="mb-8 h-14 w-14 rounded-2xl bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-500">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l3 1.66 3 1.67V19a2 2 0 0 1-2 2h-1M7 19.22V21h3v-1.78a2 2 0 1 0-3 0zM17 19.22V21h3v-1.78a2 2 0 1 0-3 0zM10 9h4"/></svg>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4 tracking-tight text-white">Logística B2B</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Optimizado para instituciones y empresas que requieren mantenimiento preventivo o correctivo de flotas.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          {["Recojo programado en oficina", "Atención a centros educativos", "Facturación Electrónica"].map(item => (
+            <li class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-gray-400">
+              <span class="h-1 w-1 rounded-full bg-yellow-400"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <a href={whatsappLink} class="flex w-full items-center justify-center rounded-xl border border-white/10 py-4 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black">
+          Coordinar Recojo
+        </a>
+      </div>
+
+    </div>
+  </ContentWidth>
+</section>

@@ -1,0 +1,99 @@
+---
+import ContentWidth from "../components/ui/ContentWidth.astro";
+---
+
+<section class="relative  pt-32 pb-24 lg:pt-48 lg:pb-20 overflow-hidden">
+
+  <ContentWidth>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <div class="lg:col-span-7 z-10">
+        <div class="flex flex-wrap gap-3 mb-8">
+            <span class="px-3 py-1 rounded-md border border-yellow-400/20 bg-yellow-400/5 text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400">
+                Ventas Especializada
+            </span>
+          <span class="px-3 py-1 rounded-md border border-white/10 bg-white/5 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+                Servicio Técnico Certificado
+            </span>
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter uppercase">
+          Venta & <br/>
+          <span class="text-yellow-400">Reparación</span>
+        </h1>
+
+        <p class="mt-8 text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed">
+          Expertos en tecnología de proyección. Ofrecemos <span class="text-white font-bold">equipos de última generación</span> y soluciones técnicas con repuestos originales para todas las marcas.
+        </p>
+
+        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6">
+          <a
+            href="#services"
+            class="group relative overflow-hidden w-full sm:w-auto rounded-2xl bg-yellow-400 px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] text-black transition-all hover:shadow-[0_0_30px_rgba(250,204,21,0.3)] text-center"
+          >
+            <span class="relative z-10 text-sm">Ver Servicios</span>
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+          </a>
+
+          <a href="https://wa.me/51941801827" class="flex items-center gap-4 group w-full sm:w-auto justify-center sm:justify-start">
+            <div class="flex flex-col items-end sm:items-start">
+              <span class="text-white font-black text-2xl leading-none italic group-hover:text-yellow-400 transition-colors">Solicitar Soporte</span>
+              <span class="text-gray-500 text-[10px] font-bold uppercase tracking-widest mt-1">Diagnóstico en minutos</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative mt-16 lg:mt-0">
+        <div class="absolute -top-10 right-0 z-20 bg-[#0a0a0a] border border-white/10 p-4 rounded-2xl shadow-2xl hidden md:block animate-bounce-slow">
+          <p class="text-[9px] font-black uppercase tracking-widest text-gray-500 mb-2">Marcas Autorizadas</p>
+          <div class="flex gap-3 text-white font-bold text-xs">
+            <span>EPSON</span>
+            <span class="text-yellow-400">•</span>
+            <span>BENQ</span>
+            <span class="text-yellow-400">•</span>
+            <span>MÁS+</span>
+          </div>
+        </div>
+
+        <div class="relative z-10 transition-transform duration-700 hover:scale-105">
+          <img
+            src="/hero.webp"
+            alt="Venta y Reparación de Proyectores"
+            class="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)]"
+          />
+
+          <div class="absolute top-[40%] left-[15%] w-24 h-24 bg-yellow-400/20 blur-2xl rounded-full animate-pulse"></div>
+        </div>
+
+        <div class="absolute -bottom-10 -right-10 text-white/[0.02] text-[10rem] font-black italic uppercase select-none pointer-events-none leading-none">
+          PRO
+        </div>
+      </div>
+
+    </div>
+  </ContentWidth>
+</section>
+
+<style>
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 4s infinite ease-in-out;
+  }
+
+  h1 {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+  }
+</style>

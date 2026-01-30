@@ -1,0 +1,17 @@
+---
+import CardProduct from "../components/ui/CardProduct.astro";
+import { services } from "../data-list";
+---
+
+<section>
+  <div class="wrapper-title">
+    <h2 class="color__primary">Algunos de nuestro servicios</h2>
+  </div>
+  <div class="card-list">
+    {
+      services.map((product, index) => (
+        <CardProduct key={index} imagePath={product.imagePath} imageAlt={product.imageAlt} />
+      ))
+    }
+  </div>
+</section>

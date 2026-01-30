@@ -1,0 +1,91 @@
+---
+import ContentWidth from "../components/ui/ContentWidth.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  whatsappLink?: string;
+  quoteLink?: string;
+}
+
+const {
+  title = "¿LISTO PARA RECUPERAR LA CLARIDAD DE TU IMAGEN?",
+  description = "No permitas que una falla detenga tus presentaciones. Cotiza ahora la reparación o mantenimiento de tu equipo con especialistas.",
+  whatsappLink = "https://wa.me/51941801827?text=Hola%20Servitec,%20quiero%20cotizar%20un%20servicio%20para%20mi%20proyector.",
+  quoteLink = "/contact",
+} = Astro.props;
+---
+
+<section class="py-24 relative overflow-hidden ">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none opacity-40">
+    <div class="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,#facc1500_0deg,#facc1510_120deg,#facc1500_240deg)] blur-[100px]"></div>
+  </div>
+
+  <ContentWidth>
+    <div class="relative group">
+      <div class="absolute -inset-px  rounded-3xl"></div>
+
+      <div class="relative bg-black/40 backdrop-blur-xl rounded-3xl p-8 md:p-20 border border-white/5 overflow-hidden">
+
+        <div class="flex flex-col lg:flex-row items-center gap-12 relative z-10">
+
+          <div class="flex-1 text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+              <span class="h-2 w-2 rounded-full bg-yellow-400"></span>
+              <span class="text-yellow-400 text-[10px] font-black uppercase tracking-[0.4em]">Respaldo Técnico Real</span>
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase italic">
+              {title.split(' ').slice(0, -1).join(' ')} <br/>
+              <span class="text-yellow-400">{title.split(' ').pop()}</span>
+            </h2>
+
+            <p class="mt-8 text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed">
+              {description}
+            </p>
+
+            <div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-8 border-t border-white/5 pt-8">
+              <div class="flex flex-col">
+                <span class="text-white font-black text-xl italic uppercase">Lima, PERÚ</span>
+                <span class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Sede Chorrillos</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-white font-black text-xl italic uppercase">+51 941801827</span>
+                <span class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">WhatsApp Soporte</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 w-full lg:w-72">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              class="group/btn relative overflow-hidden flex items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-8 py-6 text-xs font-black uppercase tracking-widest text-black transition-all hover:scale-105 active:scale-95 shadow-[0_20px_40px_-15px_rgba(250,204,21,0.3)]"
+            >
+              <span class="relative z-10">Cotizar WhatsApp</span>
+              <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1.5s_infinite]"></div>
+            </a>
+
+            <a
+              href={quoteLink}
+              class="flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-6 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black"
+            >
+              Llenar Formulario
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </ContentWidth>
+</section>
+
+<style>
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  h2 {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+  }
+</style>

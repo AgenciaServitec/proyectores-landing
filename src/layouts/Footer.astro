@@ -1,17 +1,22 @@
 ---
-import { IconItem, Divider } from "../components";
+import ContentWidth from "../components/ui/ContentWidth.astro";
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  { name: "Inicio", href: "/" },
+  { name: "Servicios", href: "/#services" },
+  { name: "Atención", href: "/#chanel-services" },
+  { name: "Como trabajamos", href: "/#about-us" },
+  { name: "Contacto", href: "/contact" },
+];
 ---
 
-<footer class="footer">
-  <Divider />
-
-  <img src="./images/logo.webp" alt="proyectores servitec logo" />
-
-  <span class="slogan-description">
-    Estamos aquí para ayudarte a encontrar el proyector perfecto para tus
-    necesidades. No dudes en ponerte en contacto con nosotros para obtener más
-    información sobre nuestros productos y servicios.</span
-  >
+<footer class="relative bg-[#050505] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <div class="absolute top-0 right-0 pointer-events-none select-none overflow-hidden h-full w-full opacity-[0.02]">
+    <span class="text-[15vw] font-black uppercase leading-none block -translate-y-1/4 translate-x-1/4 text-white italic">
+      Servitec
+    </span>
+  </div>
 
   <section class="icons-list">
     <IconItem title="Contáctanos" span="+51 975 120 466" />
@@ -32,65 +37,83 @@ import { IconItem, Divider } from "../components";
     />
   </section>
 
-  <!-- <div class="footer__bottom">
-    <p>
-      Copyrights © 2023 Proyectores Servitec Todos los derechos reservados -
-      Desarrollado por <a
-        href="https://agenciaservitec.com"
-        target="_blank"
-        class="color__primary">Agencia Servitec</a
-      >
-    </p>
-  </div> -->
+      <div class="lg:col-span-5 space-y-10">
+        <div class="space-y-6">
+          <div class="group inline-block">
+            <img src="/images/logo.webp" alt="Servitec Logo" class="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
+          </div>
+
+          <div class="flex flex-col gap-2 border-l-2 border-yellow-400 pl-4 py-1">
+            <div class="flex flex-col">
+              <span class="text-[9px] font-black uppercase tracking-[0.3em] text-yellow-400/50">Razón Social</span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider">Servitec Perú GROUP EIRL</span>
+            </div>
+            <div class="flex flex-col mt-2">
+              <span class="text-[9px] font-black uppercase tracking-[0.3em] text-yellow-400/50">Identificación Tributaria</span>
+              <span class="text-xs font-bold text-white uppercase tracking-[0.2em]">RUC: 20604141240</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-gray-400 text-lg leading-relaxed max-w-md italic">
+          Expertos en devolverle la vida a tus proyecciones. Tecnología de precisión y respaldo técnico <span class="text-white font-bold">certificado en Lima.</span>
+        </p>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h4 class="text-xs font-black uppercase tracking-[0.3em] text-yellow-400 mb-8">Navegación</h4>
+        <ul class="space-y-4">
+          {footerLinks.map(link => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-all hover:pl-2 flex items-center gap-2 group text-sm">
+                <span class="h-px w-0 bg-yellow-400 group-hover:w-4 transition-all"></span>
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4 space-y-8">
+        <div>
+          <h4 class="text-xs font-black uppercase tracking-[0.3em] text-yellow-400 mb-6">Ubicación Central</h4>
+          <a href="https://maps.app.goo.gl/..." target="_blank" class="flex items-start gap-4 group">
+            <div class="h-12 w-12 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-400 group-hover:text-black transition-colors">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="text-sm">
+              <p class="text-white font-bold tracking-tight">Chorrillos, Lima</p>
+              <p class="text-gray-500 mt-1 uppercase text-[10px] tracking-widest font-bold">Néstor Bermúdez 113</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-black uppercase tracking-[0.3em] text-yellow-400 mb-6">Horario de Operación</h4>
+          <div class="p-6 rounded-3xl border border-white/5 bg-gradient-to-br from-white/[0.04] to-transparent">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="h-2 w-2 rounded-full bg-yellow-400 animate-pulse"></span>
+              <span class="text-[10px] font-black uppercase tracking-widest text-white">Taller Abierto</span>
+            </div>
+            <p class="text-3xl font-black text-white tracking-tighter uppercase italic">Lun – Vie</p>
+            <p class="text-gray-500 text-sm mt-1 font-medium">09:00 AM — 06:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+      <div class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
+        © {currentYear} Proyectores Servitec <span class="mx-2 text-white/10">|</span> Todos los derechos reservados
+      </div>
+
+      <a href="https://wa.me/51941801827" class="group flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-colors hover:text-yellow-400">
+        <span class="text-gray-500">Soporte Express</span>
+        <span class="h-8 w-8 rounded-full bg-yellow-400 text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.389l-.72 2.634 2.7-.707c.813.447 1.742.7 2.727.7 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.767-5.767-5.767zm3.39 8.201c-.147.412-.85.758-1.159.805-.309.048-.68.086-2.115-.494-1.838-.74-3.023-2.613-3.115-2.738-.093-.125-.756-.999-.756-1.921 0-.922.483-1.375.654-1.562.171-.188.375-.234.5-.234.125 0 .25 0 .359.005.114.005.266-.042.417.317.156.375.531 1.297.578 1.391.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.197.245-.281.328-.094.094-.192.197-.083.385.109.188.485.799 1.04 1.291.714.634 1.314.831 1.502.924.188.094.297.078.406-.047.109-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.312.141.359.219.048.078.048.452-.099.864z"/></svg>
+        </span>
+      </a>
+    </div>
+  </ContentWidth>
 </footer>
-
-<style lang="scss">
-  .footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2em;
-
-    img {
-      width: 17em;
-      margin: 1.2em auto;
-    }
-
-    .slogan-description {
-      text-align: center;
-      color: #ffffff8c;
-      padding: 1em;
-    }
-
-    .icons-list {
-      padding: 2em 1.5em;
-      gap: 1em;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(12em, auto));
-      width: 100%;
-    }
-
-    &__bottom {
-      background: #000;
-      width: 100%;
-      padding: 1em;
-
-      p {
-        text-align: center;
-        font-size: 0.9em;
-
-        a {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 500px) {
-    footer {
-      .slogan-description {
-        max-width: 50%;
-      }
-    }
-  }
-</style>
