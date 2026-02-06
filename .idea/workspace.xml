@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="refactored settings">
+    <list default="true" id="9ef206e9-c4fe-4a85-8b1f-b107a2f04219" name="Changes" comment="updated information">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/Hero.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Hero.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sections/HowToWork.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/HowToWork.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/SeoSection.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/SeoSection.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/Services.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Services.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,8 @@
       <workItem from="1757973504116" duration="45000" />
       <workItem from="1757973572933" duration="88000" />
       <workItem from="1770158254857" duration="579000" />
-      <workItem from="1770223218282" duration="172000" />
+      <workItem from="1770223218282" duration="527000" />
+      <workItem from="1770400737457" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="Add: added alt attribute to image element and updated services.js">
       <option name="closed" value="true" />
@@ -154,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770158730135</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated information">
+      <option name="closed" value="true" />
+      <created>1770223422025</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770223422025</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +189,7 @@
     <MESSAGE value="refactored import" />
     <MESSAGE value="updated astro netlify" />
     <MESSAGE value="refactored settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored settings" />
+    <MESSAGE value="updated information" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated information" />
   </component>
 </project>
