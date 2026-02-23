@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://proyectores.servitecperu.com/*"
+  to = "https://servitecperu.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://reparacion-proyectores.com/*"
+  to = "https://servitecperu.com/"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://reparaciones-proyector.com/*"
+  to = "https://servitecperu.com/"
+  status = 301
+  force = true
